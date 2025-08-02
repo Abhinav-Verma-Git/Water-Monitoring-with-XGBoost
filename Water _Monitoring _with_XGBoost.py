@@ -9,7 +9,7 @@ from xgboost import XGBRegressor
 data=pd.read_csv("water_potability.csv")
 print(data.head())
 print(data.describe())
-'''''
+
 data.hist(bins=10,figsize=(15,10))
 plt.tight_layout()
 plt.show()
@@ -18,7 +18,7 @@ plt.figure(figsize=(10,6))
 sns.heatmap(data.corr(numeric_only=True),annot=True,cmap='coolwarm',fmt='.2f')
 plt.title("Correltaion Heatmap")
 plt.show()
-'''''
+
 features=data.drop(columns=['Potability'])
 target=data['Potability']
 
